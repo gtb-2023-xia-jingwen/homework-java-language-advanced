@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.twc'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
+
+    compile group: 'org.junit-pioneer', name: 'junit-pioneer', version: '0.1.2'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}
