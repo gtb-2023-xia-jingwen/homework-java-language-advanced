@@ -1,6 +1,6 @@
-package com.twc.javaBasic;
+package com.twc.javabasic;
 
-public class KeyValuePair<TKey, TValue> {
+public class KeyValuePair<TKey, TValue> {   //NOSONAR
     private final TKey key;
     private final TValue value;
 

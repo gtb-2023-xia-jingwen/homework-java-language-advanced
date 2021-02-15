@@ -1,4 +1,4 @@
-package com.twc.javaBasic;
+package com.twc.javabasic;
 
 import org.junit.jupiter.api.Test;
 

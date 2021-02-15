@@ -1,4 +1,4 @@
-package com.twc.javaBasic;
+package com.twc.javabasic;
 
 public class Pair<T> {
     private T first;
