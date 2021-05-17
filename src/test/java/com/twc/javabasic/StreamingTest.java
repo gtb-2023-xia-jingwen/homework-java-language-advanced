@@ -100,7 +100,7 @@ class StreamingTest {
     void should_be_able_to_map_stream() {
         Stream<String> wordStream = Stream.of("a", "quick", "brown", "fox", "jumps", "over");
 
-        // TODO: please write code to filter word whose length is greater than 4
+        // TODO: please write code to convert words to be upper-cased
         // <--start
         Stream<String> filtered = null;
         // --end-->
