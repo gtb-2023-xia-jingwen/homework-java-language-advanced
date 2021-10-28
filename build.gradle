@@ -1,13 +1,12 @@
 plugins {
     id 'java'
     id "jacoco"
-    id "org.sonarqube" version "3.0"
 }
 
 group 'com.twc'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 11
+sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     maven {
@@ -17,9 +16,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
-
-    compile group: 'org.junit-pioneer', name: 'junit-pioneer', version: '0.1.2'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.8.1')
 }
 
 test {
@@ -35,15 +32,3 @@ jacocoTestReport {
         xml.enabled true
     }
 }
-
-sonarqube {
-    properties {
-        System.properties.'sonar.host.url' = System.properties.'gtb.sonar.host.url'
-        System.properties.'sonar.login' = System.properties.'gtb.sonar.login'
-        def studentTerm = System.properties.'gtb.sonar.student.term'
-        def studentName = System.properties.'gtb.sonar.student.name'
-        property "sonar.projectKey", "${studentName}:${studentTerm}:${project.name}"
-    }
-}
-
-project.tasks["sonarqube"].dependsOn "jacocoTestReport"
