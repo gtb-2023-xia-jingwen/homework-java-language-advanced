@@ -1,10 +1,9 @@
-pluginManagement { 
-    repositories { 
-        maven { 
-            url "https://maven.aliyun.com/repository/gradle-plugin" 
-        } 
-    } 
+pluginManagement {
+    repositories {
+        maven {
+            url "https://maven.aliyun.com/repository/gradle-plugin"
+        }
+    }
 }
 
-rootProject.name = 'java-language-extend'
-
+rootProject.name = 'homework-java-language-advanced'
