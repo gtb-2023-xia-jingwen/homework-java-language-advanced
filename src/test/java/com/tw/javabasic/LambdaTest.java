@@ -1,16 +1,16 @@
 package com.tw.javabasic;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import com.tw.javabasic.util.StringFunc;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LambdaTest {
     // Recommended time used: 15 min
 
     @Test
     void should_apply_to_interface_with_single_abstract_method() {
-        StringFunc lambda = () -> "Hello";
+        final StringFunc lambda = () -> "Hello";
 
         // TODO:
         //  You should write down the answer directly.
@@ -18,7 +18,7 @@ class LambdaTest {
         // Hint
         //  For reference, please check page 315 of "Core Java Vol 1", section 6.3.2.
         // <--start
-        final String expect = "Hello";
+        final String expect = "";
         // --end-->
 
         assertEquals(expect, lambda.getString());
@@ -32,7 +32,7 @@ class LambdaTest {
         // Hint
         //  For reference please check page 319 of "Core Java Vol 1", section 6.3.4.
         // <--start
-        StringFunc lambda = this::instanceMethod;
+        final StringFunc lambda = null;
         // --end-->
 
         assertEquals("instanceMethod", lambda.getString());
@@ -46,7 +46,7 @@ class LambdaTest {
         // Hint:
         //  For reference please check page 319 of "Core Java Vol 1", section 6.3.4.
         // <--start
-        StringFunc lambda = LambdaTest::staticMethod;
+        final StringFunc lambda = null;
         // --end-->
 
         assertEquals("staticMethod", lambda.getString());
