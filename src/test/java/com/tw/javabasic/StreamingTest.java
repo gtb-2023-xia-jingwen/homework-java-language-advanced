@@ -207,27 +207,6 @@ class StreamingTest {
         }
     }
 
-    @Test
-    void should_hook_stream_generation() {
-        final ValueHolder<Integer> holder = new ValueHolder<>();
-        holder.setValue(0);
-
-        final Stream<Integer> hookStream = Stream
-            .iterate(0, i -> i + 1)
-            .limit(20)
-            .filter(v -> v % 2 == 0)
-            .peek(v -> holder.setValue(holder.getValue() + v));
-
-        hookStream.forEach(i -> {});
-
-        // TODO: please modify the following code to pass the test
-        // <--start
-        final int expected = 0;
-        // --end-->
-
-        assertEquals(expected, holder.getValue().intValue());
-    }
-
     @SuppressWarnings({"ConstantConditions", "unchecked", "OptionalAssignedToNull"})
     @Test
     void should_throws_if_get_value_of_empty_optional() {

@@ -37,13 +37,13 @@ class GenericTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final boolean expected = false;
         // --end-->
 
-        assertEquals(expected.get(), pair.getClass().equals(pairWithDifferentTypeParameter.getClass()));
+        assertEquals(expected, pair.getClass().equals(pairWithDifferentTypeParameter.getClass()));
     }
 
-    @SuppressWarnings({"UnnecessaryLocalVariable", "unchecked", "unused", "ConstantConditions"})
+    @SuppressWarnings({"UnnecessaryLocalVariable", "unchecked", "unused"})
     @Test
     void should_be_careful_of_raw_type_generic() {
         final Pair<Manager> managerPair = new Pair<>();
@@ -59,10 +59,10 @@ class GenericTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final boolean expected = false;
         // --end-->
 
-        assertEquals(expected.get(), willThrow);
+        assertEquals(expected, willThrow);
     }
 
     @SuppressWarnings("unused")

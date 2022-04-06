@@ -69,10 +69,10 @@ class ExceptionTest {
         // Hint:
         //  If you want some reference, please check page 376 of "Core Java Vol 1", section 7.2.5.
         // <--start
-        final Optional<Boolean> expected = null;
+        final boolean expected = false;
         // --end-->
 
-        assertEquals(expected.get(), closableStateReference.isClosed());
+        assertEquals(expected, closableStateReference.isClosed());
     }
 
     @SuppressWarnings({"EmptyTryBlock", "unused"})
