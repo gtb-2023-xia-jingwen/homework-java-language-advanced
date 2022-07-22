@@ -314,6 +314,7 @@ class StreamingTest {
         final Stream<String> stream = Stream.of("Hello", "What", "is", "your", "name");
 
         // TODO: please implement toList collector using `stream.collect`. You cannot use existing `toList` collector.
+        // Hint: You can find useful information in `Stream.java: <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner);`
         // <--start
         List<String> list = null;
         // --end-->
@@ -335,6 +336,7 @@ class StreamingTest {
         ).parallel();
 
         // TODO: please implement toMap collector using `stream.collect`. You cannot use existing `toMap` collector.
+        // Hint: You can find useful information in `Stream.java: <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner);`
         // <--start
         Map<String, Integer> map = null;
         // --end-->
