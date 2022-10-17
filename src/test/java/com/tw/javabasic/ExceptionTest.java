@@ -49,7 +49,7 @@ class ExceptionTest {
         // Hint:
         //  If you want some reference, please check page 372 of "Core Java Vol 1", section 7.2.4.
         // <--start
-        final int expectedResult = Integer.MAX_VALUE;
+        final int expectedResult = 0;
         // --end-->
 
         assertEquals(expectedResult, confusedResult);
