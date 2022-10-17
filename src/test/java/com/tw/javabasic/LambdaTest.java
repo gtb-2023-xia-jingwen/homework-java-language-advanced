@@ -18,7 +18,7 @@ class LambdaTest {
         // Hint
         //  For reference, please check page 315 of "Core Java Vol 1", section 6.3.2.
         // <--start
-        final String expect = "";
+        final String expect = "Hello";
         // --end-->
 
         assertEquals(expect, lambda.getString());
