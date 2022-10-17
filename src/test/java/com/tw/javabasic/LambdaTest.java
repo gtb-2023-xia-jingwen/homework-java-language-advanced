@@ -32,7 +32,7 @@ class LambdaTest {
         // Hint
         //  For reference please check page 319 of "Core Java Vol 1", section 6.3.4.
         // <--start
-        final StringFunc lambda = null;
+        final StringFunc lambda = () -> "instanceMethod";
         // --end-->
 
         assertEquals("instanceMethod", lambda.getString());
