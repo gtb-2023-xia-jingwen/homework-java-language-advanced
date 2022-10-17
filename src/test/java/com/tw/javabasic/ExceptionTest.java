@@ -69,7 +69,7 @@ class ExceptionTest {
         // Hint:
         //  If you want some reference, please check page 376 of "Core Java Vol 1", section 7.2.5.
         // <--start
-        final boolean expected = false;
+        final boolean expected = true;
         // --end-->
 
         assertEquals(expected, closableStateReference.isClosed());
