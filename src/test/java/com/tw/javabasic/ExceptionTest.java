@@ -94,7 +94,7 @@ class ExceptionTest {
         // Hint:
         //  If you want some reference, please check page 376 of "Core Java Vol 1", section 7.2.5.
         // <--start
-        final String[] expected = {};
+        final String[] expected = {"ClosableWithException.close", "ClosableWithoutException.close"};
         // --end-->
 
         assertArrayEquals(expected, logger.toArray());
