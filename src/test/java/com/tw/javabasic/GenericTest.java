@@ -59,7 +59,7 @@ class GenericTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final boolean expected = false;
+        final boolean expected = true;
         // --end-->
 
         assertEquals(expected, willThrow);
