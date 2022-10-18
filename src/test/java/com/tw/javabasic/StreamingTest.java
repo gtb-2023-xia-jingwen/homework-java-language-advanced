@@ -50,7 +50,7 @@ class StreamingTest {
     void should_be_able_to_generate_empty_stream() {
         // TODO: please modify the following code to pass the test
         // <--start
-        Stream<String> emptyWordStream = null;
+        Stream<String> emptyWordStream = Stream.empty();
         // --end-->
         {
             assertEquals(0, emptyWordStream.count());
