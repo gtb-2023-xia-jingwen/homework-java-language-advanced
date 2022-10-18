@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -62,7 +63,12 @@ class StreamingTest {
     void should_be_able_to_generate_infinite_stream_with_same_items() {
         // TODO: please modify the following code to pass the test
         // <--start
-        Stream<String> infiniteEchos = null;
+        class EchoSupplier implements Supplier<String> {
+            public String get() {
+                return "Echo";
+            }
+        }
+        Stream<String> infiniteEchos = Stream.generate(new EchoSupplier());
         // --end-->
         {
             assertEquals("Echo", infiniteEchos.skip(10000).findFirst().get());
