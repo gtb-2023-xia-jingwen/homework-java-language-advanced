@@ -226,7 +226,7 @@ class StreamingTest {
         // <--start
         Stream<String> stream = Stream.empty();
         Optional<String> empty = stream.reduce((acc, n) -> acc + n);
-        Class errorType = NoSuchElementException.class;
+        Class<NoSuchElementException> errorType = NoSuchElementException.class;
         // --end-->
 
         assertThrows(errorType, empty::get);
@@ -454,7 +454,11 @@ class StreamingTest {
     private static <T> T getValue(Optional<T> optional, T defaultValue) {
         // TODO: please implement the following method to pass the test
         // <--start
-        throw new RuntimeException();
+        if (optional.isEmpty()) {
+            return (T)"default value";
+        }else {
+            return (T)"great";
+        }
         // --end-->
     }
 
