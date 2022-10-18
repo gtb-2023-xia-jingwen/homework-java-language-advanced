@@ -224,8 +224,9 @@ class StreamingTest {
     void should_throws_if_get_value_of_empty_optional() {
         // TODO: please create an empty optional and specify the concrete exception type.
         // <--start
-        Optional<String> empty = null;
-        Class errorType = null;
+        Stream<String> stream = Stream.empty();
+        Optional<String> empty = stream.reduce((acc, n) -> acc + n);
+        Class errorType = NoSuchElementException.class;
         // --end-->
 
         assertThrows(errorType, empty::get);
