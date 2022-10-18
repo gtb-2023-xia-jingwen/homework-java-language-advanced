@@ -114,7 +114,7 @@ class StreamingTest {
 
         // TODO: please write code to convert words to be upper-cased
         // <--start
-        Stream<String> filtered = null;
+        Stream<String> filtered = wordStream.map(String::toUpperCase);
         // --end-->
         {
             assertArrayEquals(
