@@ -80,7 +80,13 @@ class StreamingTest {
     void should_be_able_to_generate_infinite_stream_of_sequence() {
         // TODO: please modify the following code to pass the test
         // <--start
-        Stream<Integer> infiniteSequence = null;
+        class IntSupplier implements Supplier<Integer> {
+            int n = 0;
+            public Integer get() {
+                return n++;
+            }
+        }
+        Stream<Integer> infiniteSequence = Stream.generate(new IntSupplier());
         // --end-->
         {
             assertEquals(10000, infiniteSequence.skip(10000).findFirst().get().intValue());
