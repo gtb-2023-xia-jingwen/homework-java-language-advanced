@@ -269,9 +269,7 @@ class StreamingTest {
         Consumer<Optional<String>> optionalConsumer = new Consumer<Optional<String>>() {
             @Override
             public void accept(Optional<String> s) {
-                if (s.isPresent()) {
-                    result.add(s.get().toUpperCase(Locale.ROOT));
-                }
+                s.ifPresent(value -> result.add(value.toUpperCase(Locale.ROOT)));
             }
         };
         // --end-->
