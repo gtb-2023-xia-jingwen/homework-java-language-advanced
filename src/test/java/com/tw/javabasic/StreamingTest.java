@@ -153,7 +153,7 @@ class StreamingTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        Stream<Character> flatted = null;
+        Stream<Character> flatted = nameStream.flatMap(s -> s);
         // --end-->
         {
             assertArrayEquals(
