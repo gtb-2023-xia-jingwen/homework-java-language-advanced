@@ -351,7 +351,11 @@ class StreamingTest {
         // TODO: please implement toMap collector using `stream.collect`. You cannot use existing `toMap` collector.
         // Hint: You can find useful information in `Stream.java: <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner);`
         // <--start
-        Map<String, Integer> map = null;
+        Map<String, Integer> map = stream.collect(
+                HashMap::new,
+                (acc, entry) -> acc.put(entry.getKey(), entry.getValue()),
+                HashMap::putAll
+        );
         // --end-->
 
         assertEquals(2, map.size());
