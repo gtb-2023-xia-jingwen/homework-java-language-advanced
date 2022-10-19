@@ -251,7 +251,7 @@ class StreamingTest {
 
         // TODO: In the `Runnable` object. Please throw IllegalStateException when `empty` is not present.
         // <--start
-        Runnable emptyRunnable = null;
+        Runnable emptyRunnable = () -> empty.orElseThrow(IllegalStateException::new);
         // --end-->
 
         assertThrows(IllegalStateException.class, emptyRunnable::run);
