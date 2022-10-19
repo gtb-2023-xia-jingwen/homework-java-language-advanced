@@ -310,7 +310,7 @@ class StreamingTest {
         // TODO: The `findFirstAndGet` interface will find first item in stream. If it can be found, map it with
         // TODO: `YieldOptional.get` method. Otherwise, returns empty Optional.
         // <--start
-        Function<Stream<YieldOptional>, Optional<String>> findFirstAndGet = null;
+        Function<Stream<YieldOptional>, Optional<String>> findFirstAndGet = s -> s.findFirst().flatMap(YieldOptional::get);
         // --end-->
 
         final Optional<String> emptyStreamResult = findFirstAndGet.apply(emptyStream);
