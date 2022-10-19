@@ -266,12 +266,7 @@ class StreamingTest {
         // TODO: please add the upper-cased value to result if `optional` is present in `Consumer<Optional<String>>`
         // TODO: implementation.
         // <--start
-        Consumer<Optional<String>> optionalConsumer = new Consumer<Optional<String>>() {
-            @Override
-            public void accept(Optional<String> s) {
-                s.ifPresent(value -> result.add(value.toUpperCase(Locale.ROOT)));
-            }
-        };
+        Consumer<Optional<String>> optionalConsumer = s -> s.ifPresent(value -> result.add(value.toUpperCase()));
         // --end-->
 
         optionalConsumer.accept(optional);
