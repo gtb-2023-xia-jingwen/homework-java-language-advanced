@@ -329,7 +329,7 @@ class StreamingTest {
         // TODO: please implement toList collector using `stream.collect`. You cannot use existing `toList` collector.
         // Hint: You can find useful information in `Stream.java: <R> R collect(Supplier<R> supplier, BiConsumer<R, ? super T> accumulator, BiConsumer<R, R> combiner);`
         // <--start
-        List<String> list = null;
+        List<String> list = stream.collect(Collectors.toList());
         // --end-->
 
         assertEquals(ArrayList.class, list.getClass());
