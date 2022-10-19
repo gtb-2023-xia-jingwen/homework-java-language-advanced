@@ -470,11 +470,7 @@ class StreamingTest {
     private static <T> T getValue(Optional<T> optional, T defaultValue) {
         // TODO: please implement the following method to pass the test
         // <--start
-        if (optional.isEmpty()) {
-            return (T)"default value";
-        }else {
-            return (T)"great";
-        }
+        return optional.orElse(defaultValue);
         // --end-->
     }
 
