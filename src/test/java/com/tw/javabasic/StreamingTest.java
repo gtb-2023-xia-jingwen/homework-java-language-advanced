@@ -291,7 +291,7 @@ class StreamingTest {
         // TODO: please add the upper-cased value to `result` list if optional is present. Then return the boolean
         // TODO: mapping result of `result.add`.
         // <--start
-        Function<Optional<String>, Optional<Boolean>> mapping = null;
+        Function<Optional<String>, Optional<Boolean>> mapping = s -> s.map(value -> result.add(value.toUpperCase()));
         // --end-->
 
         final Optional<Boolean> mappingResult = mapping.apply(optional);
